@@ -1,0 +1,48 @@
+.masthead-sidelink {
+  float: right;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-size: .875rem;
+  line-height: 1.9rem;
+  font-weight: 400;
+  color: #c0c0c0;
+  letter-spacing: 0;
+}
+}
+
+@media (max-width: 48em) {
+  .masthead-sidelink,
+  .github-fork-ribbon-wrapper {
+    display: none;
+  }
+}
+
+.content {
+  color: #666;
+}
+
+.message {
+  color: #888;
+}
+
+.landing .content {
+  font-size: .85rem;
+}
+
+.landing #contact {
+  text-align: center;
+  font-size: .75rem;
+  margin-bottom: 2rem;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+}
+
+/*.landing .container.content {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+@media (min-width: 56em) {
+.landing .container.content {
+  max-width: 60rem;
+  margin-left: 0;
+  margin-right: 0;
+}*/

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>Luis Merino</title>
+ <link href="http://luismerino.name/atom.xml" rel="self"/>
+ <link href="http://luismerino.name/"/>
+ <updated>2015-03-24T20:46:13+01:00</updated>
+ <id>http://luismerino.name</id>
+ <author>
+   <name>Luis Merino</name>
+   <email>mail@luismerino.name</email>
+ </author>
+
+ 
+ <entry>
+   <title>Day zero plus one</title>
+   <link href="http://luismerino.name/blog/2015/03/24/day-zero-plus-one/"/>
+   <updated>2015-03-24T00:00:00+01:00</updated>
+   <id>http://luismerino.name/blog/2015/03/24/day-zero-plus-one</id>
+   <content type="html">&lt;p&gt;Today&amp;#39;s &lt;em&gt;day zero&lt;/em&gt;, because this, my &lt;em&gt;personal&lt;/em&gt; blog is &lt;strong&gt;back online&lt;/strong&gt;!&lt;/p&gt;
+
+&lt;p&gt;And &lt;em&gt;plus one&lt;/em&gt;, because I&amp;#39;ve already shared my thoughts in the past, here are some of them to start off:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;h2&gt;&lt;a href=&quot;https://www.proudsugar.com/blog/mixpanel-js-6-things-you-probably-did-not-know-about&quot;&gt;Mixpanel JS - 6 things you probably didn&amp;#39;t know about&lt;/a&gt;&lt;/h2&gt;&lt;/li&gt;
+&lt;li&gt;&lt;h2&gt;&lt;a href=&quot;https://www.proudsugar.com/blog/how-to-build-your-company-site-using-ruby-rake-in-less-than-9-days&quot;&gt;How to build your company&amp;#39;s site using Ruby/Rake in less than 9 days&lt;/a&gt;&lt;/h2&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;Read more from now on in the &lt;a href=&quot;/blog&quot;&gt;recent entries&lt;/a&gt;.&lt;/p&gt;
+</content>
+ </entry>
+ 
+
+</feed>

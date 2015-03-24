@@ -1,0 +1,27 @@
+# Dependencies
+markdown:            redcarpet
+highlighter:         pygments
+
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           pretty
+relative_permalinks: true
+
+# Setup
+title:               Luis Merino
+tagline:             'Full stack front-end developer'
+description:         "Hi, I'm Luis Merino. I am a software developer on the multi-browser and multi-platform environment of the web."
+url:                 http://luismerino.name
+baseurl:             /
+paginate:            3
+paginate_path:       "/blog/page:num/"
+
+# About/contact
+author:
+  name:              Luis Merino
+  url:               https://twitter.com/Rendez
+  email:             mail@luismerino.name
+
+# Custom vars
+version:             1.0.0
