@@ -1,3 +1,12 @@
+/*
+ * Contents
+ *
+ * Masthead
+ * Landing
+ * Latest projects
+ * Latest posts
+ */
+
 .masthead-sidelink {
   float: right;
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
@@ -7,13 +16,17 @@
   color: #c0c0c0;
   letter-spacing: 0;
 }
-}
 
 @media (max-width: 48em) {
   .masthead-sidelink,
   .github-fork-ribbon-wrapper {
     display: none;
   }
+}
+
+.github-fork-ribbon {
+  -webkit-box-shadow: 0 2px 3px 0 rgba(0,0,0,.2);
+  box-shadow: 0 2px 3px 0 rgba(0,0,0,.2);
 }
 
 .content {
@@ -46,3 +59,60 @@
   margin-left: 0;
   margin-right: 0;
 }*/
+
+/* Latests projects */
+.latest {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-top: 1px solid #eee;
+}
+.latest-projects {
+  padding-left: 0;
+  list-style: none;
+}
+.latest-projects h3 {
+  margin-top: 0;
+}
+.latest-projects li {
+  margin-bottom: 1.5rem;
+}
+.latest-projects li small {
+  font-size: 75%;
+  color: #999;
+}
+.latest-projects li a:hover {
+  text-decoration: none;
+}
+.latest-projects li a:hover small {
+  color: inherit;
+}
+.latest-projects li img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* Latests posts */
+.latest {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-top: 1px solid #eee;
+}
+.latest-posts {
+  padding-left: 0;
+  list-style: none;
+}
+.latest-posts h3 {
+  margin-top: 0;
+}
+.latest-posts li small {
+  font-size: 75%;
+  color: #999;
+}
+.latest-posts li a:hover {
+  text-decoration: none;
+}
+.latest-posts li a:hover small {
+  color: inherit;
+}

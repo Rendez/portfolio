@@ -3,7 +3,7 @@
 
   {% include head.html %}
 
-  <body class="theme-base-08{% if page.url == '/' %} landing{% endif %}">
+  <body class="theme-base-08{% if page.dir == '/' %} landing{% endif %}">
 
     {% include sidebar.html %}
 
@@ -17,7 +17,11 @@
       </div>
       <div class="masthead">
         <div class="container">
-          {% if page.url == '/' %}<span class="masthead-sidelink">Seen my <a href="/blog" title="Blog">Blog</a>?</span>{% endif %}
+          {% if page.dir == '/' %}
+            <span class="masthead-sidelink">Seen my <a href="/blog" title="Blog">Blog</a>?</span>
+          {% else %}
+            <span class="masthead-sidelink">Seen my <a href="/blog" title="Blog">CV</a>?</span>
+          {% endif %}
           <h3 class="masthead-title">
             <a href="/" title="Home">{{ site.title }}</a>
             <small>{{ site.tagline }}</small>
