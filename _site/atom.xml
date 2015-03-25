@@ -4,7 +4,7 @@
  <title>Luis Merino</title>
  <link href="http://luismerino.name/atom.xml" rel="self"/>
  <link href="http://luismerino.name/"/>
- <updated>2015-03-24T23:57:05+01:00</updated>
+ <updated>2015-03-25T11:34:14+01:00</updated>
  <id>http://luismerino.name</id>
  <author>
    <name>Luis Merino</name>
@@ -14,7 +14,7 @@
  
  <entry>
    <title>Day zero plus one</title>
-   <link href="http://luismerino.name/blog/day-zero-plus-one.html"/>
+   <link href="http://luismerino.name/blog/day-zero-plus-one"/>
    <updated>2015-03-24T00:00:00+01:00</updated>
    <id>http://luismerino.name/blog/day-zero-plus-one</id>
    <content type="html">&lt;p&gt;Today&amp;#39;s &lt;em&gt;day zero&lt;/em&gt;, because this, my &lt;em&gt;personal&lt;/em&gt; blog is &lt;strong&gt;back online&lt;/strong&gt;!&lt;/p&gt;
