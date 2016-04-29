@@ -4,13 +4,75 @@
  <title>Luis Merino</title>
  <link href="http://www.luismerino.name/atom.xml" rel="self"/>
  <link href="http://www.luismerino.name/"/>
- <updated>2015-06-28T12:06:56+02:00</updated>
+ <updated>2016-04-29T20:20:30+02:00</updated>
  <id>http://www.luismerino.name</id>
  <author>
    <name>Luis Merino</name>
    <email>mail@luismerino.name</email>
  </author>
 
+ 
+ <entry>
+   <title>Reflections of a decade of web development</title>
+   <link href="http://www.luismerino.name/blog/reflections-of-a-decade-of-web-development"/>
+   <updated>2015-10-25T00:00:00+02:00</updated>
+   <id>http://www.luismerino.name/blog/reflections-of-a-decade-of-web-development</id>
+   <content type="html">&lt;p&gt;Turning 30 makes me think back of the last decade. Professionally, I think everybody would agree with me that ten years in the web development industry feels more like a century.&lt;/p&gt;
+
+&lt;p&gt;I would like to share some reflections. It&amp;#39;s 2015, which does not mean much, except for the fact that Marty McFly landed in the future and that made me think of flying cars when I was little.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h3&gt;Web development back then&lt;/h3&gt;
+
+&lt;p&gt;Painful transition, that&amp;#39;s how I would describe web development when PHP 4 and IE 6 where the popular things on the web. I think the advantage back then is that the internet was starting to really boom, and everything seemed possible. Always within technological boundaries.&lt;/p&gt;
+
+&lt;p&gt;For me, I think it was great to have experienced the transition towards what we have today. I can&amp;#39;t think what people starting web development today might think when they find they can easily through some lines of three.js, create a 3D environment in which you can interact with some taps in your iPad. Or the fact that you can learn bits of Javascript and create a React Native app within minutes... The future is now, and it&amp;#39;s very very exciting.&lt;/p&gt;
+
+&lt;p&gt;It tooks us a REALLY long time to learn. The fight was long and exhaustic, but full of great milestones.&lt;/p&gt;
+
+&lt;h3&gt;I think we&amp;#39;ve learn, I&amp;#39;ve learn better&lt;/h3&gt;
+
+&lt;p&gt;When I think back at the times when I could have done something better, I admire the amount of information at our disposal these days. People claim that the next framework is the major breakthrough of the year, of that PHP7 will bring us forward, or that the new Ruby on Rails is safer now.&lt;/p&gt;
+
+&lt;p&gt;But what we&amp;#39;ve learnt, at least me, is that two minds think better than one. Github, Stackoverflow and the likes to me, are the real break-throughs of the last years. Sharing code, knowledge, educating users, designers, conferences, communities and higher purposes are the real change. Web development is today faster, more efficient and more evolving year by year, that it was 3 or 4 years back in 2000.&lt;/p&gt;
+
+&lt;p&gt;Speed and impressive ideas are pushing the industry forward, and I&amp;#39;m glad to be part of it. Albeit I have to admit sometimes some of us complain about the speed and sometimes recklessness of some decisions, but that&amp;#39;s not new.&lt;/p&gt;
+
+&lt;h3&gt;On a personal note&lt;/h3&gt;
+
+&lt;p&gt;At a personal level, I think years in the web development industry add you some nice &amp;quot;features&amp;quot; to anybody&amp;#39;s persona.&lt;/p&gt;
+
+&lt;p&gt;When someone (non-developer) asks me about how to get into development, or makes a reference about this bit of HTML he&amp;#39;s learn, and how to persist at it, I always tell them it&amp;#39;s a wonderful thing and encourage them to pursue it. One of my favourite things to advertise to new-comers about programming is the nice qualities you are likely to develop as a person:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Persistance.&lt;/li&gt;
+&lt;li&gt;Patience.&lt;/li&gt;
+&lt;li&gt;Cleverness.&lt;/li&gt;
+&lt;li&gt;Optimism (and the other face of it: pesimistic optimistic).&lt;/li&gt;
+&lt;li&gt;Introspection.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;These aren&amp;#39;t unique to programming, they are shared with any field of knowledge that requires a similar approach to problem-solving that programming does. The other part about programming I try to not leave behind is that is a long road, one that won&amp;#39;t get you far if you want an easy and quick win, but that will if you&amp;#39;re persistant and believe in it. That brings me to the last part I&amp;#39;ve enjoyed the most telling myself and other people about it: you can do amazing things with some bits of code.&lt;/p&gt;
+
+&lt;p&gt;I don&amp;#39;t think there&amp;#39;s a more powerful way to feel you&amp;#39;re contributing than being able to craft some HTML and Javascript, and have it been used by thousands of people to improve their lives.&lt;/p&gt;
+
+&lt;h3&gt;Advice is easy to give, but hard to implement&lt;/h3&gt;
+
+&lt;p&gt;I would say a couple of things that might help you reading this:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Slow down; think at least five to ten times as much time as you spend writing code.&lt;/li&gt;
+&lt;li&gt;Imagine a solution, and every step you need to take to make it happen.&lt;/li&gt;
+&lt;li&gt;Break things down, isolate, prototype, play!&lt;/li&gt;
+&lt;li&gt;Read other people&amp;#39;s code, create stuff with it.&lt;/li&gt;
+&lt;li&gt;Contribute to open source, always, even one line of documentation&amp;#39;s improvement is useful.&lt;/li&gt;
+&lt;li&gt;Always think of added value, don&amp;#39;t waste your time on irrelevant things.&lt;/li&gt;
+&lt;li&gt;Do not fight with managers, teach them and teach yourself.&lt;/li&gt;
+&lt;li&gt;Learn. Whatever your decisions, and your situation, always aim for the learning, and the rest will fall into place.&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Vectorial Iconography</title>

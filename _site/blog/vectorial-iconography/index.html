@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Vectorial Iconography &middot; Luis Merino
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/grid.css">
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/lanyon.css">
+  <link rel="stylesheet" href="/public/css/custom.css">
+  <link rel="stylesheet" href="/public/css/gh-fork-ribbon.min.css" />
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+
+  <!-- Ribbon -->
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+
+  
+</head>
+
+
+  <body class="theme-base-08">
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="github-fork-ribbon-wrapper right">
+        <div class="github-fork-ribbon">
+          <a href="https://github.com/Rendez">Fork me on GitHub</a>
+        </div>
+      </div>
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/" title="Home">Luis Merino</a>
+            <small>Senior Front-end Developer</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        <div class="post">
+  <h1 class="post-title">Vectorial Iconography</h1>
+  <span class="post-date">28 Jun 2015</span>
+  <p>The day <em>font icon sets</em> appeared as a solution, one of the most repeated problems in web development seemed solved almost overnight.</p>
+
+<p>Yes! IE had support for @font-face and .eot files since its 8th version... Say what?!</p>
+
+<p>What had we been doing wrong? The web community spent all the internet boom years inventing super smart tools like Cufon and SIRF, and a long etcetera.</p>
+
+<hr>
+
+<h3>Is this the future in iconland?</h3>
+
+<p>I believe the strongest point font-based icons have these days are the broad compatibility across browsers and devices they offer. But, are they the future?</p>
+
+<p>Two years ago at my company, we created SVG sprites as the only needed solution, that&#39;s what you get when you drop IE8 support. To my surprise, our designer came to me with his Windows laptop to ask me why did the SVG displayed with CSS backgrounds looked so blurry... &quot;Why is our logo blurry?&quot;. After some dueling on Inkscape, I quickly found an <a href="http://benfrain.com/svg-backgrounds-dont-zoom-correctly-in-internet-explorer-10/">explanation</a>.</p>
+
+<p>Meh, we can&#39;t reliably use SVG in backgrounds, bye bye SVG sprites... Unless...!</p>
+
+<blockquote>
+<p>It seems that putting a dummy SVG tag with width=100% and height=100% make IE11 display all my SVG elements.</p>
+</blockquote>
+
+<p>Which brings me back to try and understand why we use fonts to represent icons?</p>
+
+<p>We arrive then at <a href="https://icomoon.io/#docs/ligatures">ligatures</a>. We could then call symbols with common terms. Screen readers and search engines see words. Users see symbols. What a great idea? We write our word and we get an icon. Just like emoticons! I really thought for a bit this was THE solution. Ah, and let&#39;s not forget the idea to use unicode to call symbols to present our icons as well. A risky option as it seems, let&#39;s not <a href="http://nimbupani.com/markup-free-icon-fonts-with-unicode-range.html">the unicode private area</a>. There&#39;s yet another solution, unicode-range, for Chrome and Safari only it seems. This defeats the purpose of wide browser compatibility for the font-icon approach.</p>
+
+<p>To be fair, as often in web development, there is not one single solution to tackle one problem.</p>
+
+<p>It was then when I bumped into a very insightful writing from <a href="http://mir.aculo.us/2014/10/31/icon-fonts-vs-inline-svg/">Thomas Fuchs</a> on the topic. As Pete Hunt fantastically put it in JSConf 2013, <a href="https://www.youtube.com/watch?v=x7cQ3mrcKaY">Rethinking Best Practices</a>, I reminded myself that if anything, we as developers should constantly be defying instead of settling.</p>
+
+<p>When it comes to font icons, there are a couple of critical points I would like to emphasize on, because I believe that they are hard to circumvent:</p>
+
+<ul>
+<li>There’s blurry rendering on certain browsers.</li>
+<li>Some special headers are required when serving these font files so that our CDN (Amazon CloudFront).</li>
+<li>You can’t easily edit icons, and it’s hard to see what’s been updated in source code control.</li>
+</ul>
+
+<h3>Enter inline SVG, and SVG stacks</h3>
+
+<p>What is an icon if not a graphic element, an concise image representing a symbol. We need images, and our best friend SVG is not the de-facto approach to add most images to interfaces.</p>
+
+<p>Let&#39;s ask for a few things:</p>
+
+<ul>
+<li>Cross-browser solution, with PNG fallbacks.</li>
+<li>Easy flow and easy addition of icons to the set.</li>
+<li>Optimization and flexibility.</li>
+<li>Styleable and capable to understanding css animations.</li>
+<li>No flash of unstyled text; quite the opposite: instant loading, and guaranteed rendering.</li>
+</ul>
+
+<p>I would like to share my workflow to make vectorial icons a bliss and first I would like to credit the creators of <a href="https://github.com/filamentgroup/grunticon/">grunticon</a> for all the insights I&#39;ve gotten from their workflow. They wrote about their <a href="http://ianfeather.co.uk/ten-reasons-we-switched-from-an-icon-font-to-svg/">reasons for switching</a>, which reinforced my thinking.</p>
+
+<p>To stack icons into one single file, comes in handy the <use> svg element, which allows to refer to any SVG element via its ID attribute.</p>
+
+<p>Generating such stuck for me needs to be as easy as placing a new .svg file into my icons folder.</p>
+
+<p>The markup and css necessary has to be easy, and minimum.</p>
+
+<ul>
+<li>svg2png, svgstore, svg4everybody, snippet.</li>
+</ul>
+
+</div>
+
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="//blog/reflections-of-a-decade-of-web-development">
+            Reflections of a decade of web development
+            <small>25 Oct 2015</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div>
+
+      </div>
+    </div>
+  </body>
+</html>

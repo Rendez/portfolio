@@ -39,51 +39,6 @@
 
   <body class="theme-base-08 landing">
 
-    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
-     styles, `#sidebar-checkbox` for behavior. -->
-<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
-
-<!-- Toggleable sidebar -->
-<div class="sidebar" id="sidebar">
-  <div class="sidebar-item">
-    <p>Hi, I'm Luis Merino. I am a software developer on the multi-browser and multi-platform environment of the web.</p>
-  </div>
-
-  <nav class="sidebar-nav">
-    <a class="sidebar-nav-item" href="/">Home</a>
-
-    
-
-    
-    
-      
-        
-      
-    
-      
-    
-      
-        
-          <a class="sidebar-nav-item" href="/blog/index.html">Blog</a>
-        
-      
-    
-      
-        
-      
-    
-
-    
-  </nav>
-
-  <div class="sidebar-item">
-    <p>
-      &copy; 2015. All rights reserved.
-    </p>
-  </div>
-</div>
-
-
     <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
          content to avoid any CSS collisions with our real content. -->
     <div class="wrap">
@@ -94,12 +49,9 @@
       </div>
       <div class="masthead">
         <div class="container">
-          
-            <span class="masthead-sidelink">Seen my <a href="/blog" title="Blog">Blog</a>?</span>
-          
           <h3 class="masthead-title">
             <a href="/" title="Home">Luis Merino</a>
-            <small>Full stack front-end developer</small>
+            <small>Senior Front-end Developer</small>
           </h3>
         </div>
       </div>
@@ -112,25 +64,5 @@
 
       </div>
     </div>
-
-    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
-
-    <script>
-      (function(document) {
-        var toggle = document.querySelector('.sidebar-toggle');
-        var sidebar = document.querySelector('#sidebar');
-        var checkbox = document.querySelector('#sidebar-checkbox');
-
-        document.addEventListener('click', function(e) {
-          var target = e.target;
-
-          if(!checkbox.checked ||
-             sidebar.contains(target) ||
-             (target === checkbox || target === toggle)) return;
-
-          checkbox.checked = false;
-        }, false);
-      })(document);
-    </script>
   </body>
 </html>
