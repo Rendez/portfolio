@@ -111,25 +111,74 @@
   
   <div class="post">
     <h1 class="post-title">
-      <a href="/blog/day-zero-plus-one">
-        Day zero plus one
+      <a href="/blog/vectorial-iconography">
+        Vectorial Iconography
       </a>
     </h1>
 
-    <span class="post-date">24 Mar 2015</span>
+    <span class="post-date">28 Jun 2015</span>
 
-    <p>Today&#39;s <em>day zero</em>, because this, my <em>personal</em> blog is <strong>back online</strong>!</p>
+    <p>The day <em>font icon sets</em> appeared as a solution, one of the most repeated problems in web development seemed solved almost overnight.</p>
 
-<p>And <em>plus one</em>, because I&#39;ve already shared my thoughts in the past, here are some of them to start off:</p>
+<p>Yes! IE had support for @font-face and .eot files since its 8th version... Say what?!</p>
 
-<ul>
-<li><h2><a href="https://www.proudsugar.com/blog/mixpanel-js-6-things-you-probably-did-not-know-about">Mixpanel JS - 6 things you probably didn&#39;t know about</a></h2></li>
-<li><h2><a href="https://www.proudsugar.com/blog/how-to-build-your-company-site-using-ruby-rake-in-less-than-9-days">How to build your company&#39;s site using Ruby/Rake in less than 9 days</a></h2></li>
-</ul>
+<p>What had we been doing wrong? The web community spent all the internet boom years inventing super smart tools like Cufon and SIRF, and a long etcetera.</p>
 
 <hr>
 
-<p>Read more from now on in the <a href="/blog">recent entries</a>.</p>
+<h3>Is this the future in iconland?</h3>
+
+<p>I believe the strongest point font-based icons have these days are the broad compatibility across browsers and devices they offer. But, are they the future?</p>
+
+<p>Two years ago at my company, we created SVG sprites as the only needed solution, that&#39;s what you get when you drop IE8 support. To my surprise, our designer came to me with his Windows laptop to ask me why did the SVG displayed with CSS backgrounds looked so blurry... &quot;Why is our logo blurry?&quot;. After some dueling on Inkscape, I quickly found an <a href="http://benfrain.com/svg-backgrounds-dont-zoom-correctly-in-internet-explorer-10/">explanation</a>.</p>
+
+<p>Meh, we can&#39;t reliably use SVG in backgrounds, bye bye SVG sprites... Unless...!</p>
+
+<blockquote>
+<p>It seems that putting a dummy SVG tag with width=100% and height=100% make IE11 display all my SVG elements.</p>
+</blockquote>
+
+<p>Which brings me back to try and understand why we use fonts to represent icons?</p>
+
+<p>We arrive then at <a href="https://icomoon.io/#docs/ligatures">ligatures</a>. We could then call symbols with common terms. Screen readers and search engines see words. Users see symbols. What a great idea? We write our word and we get an icon. Just like emoticons! I really thought for a bit this was THE solution. Ah, and let&#39;s not forget the idea to use unicode to call symbols to present our icons as well. A risky option as it seems, let&#39;s not <a href="http://nimbupani.com/markup-free-icon-fonts-with-unicode-range.html">the unicode private area</a>. There&#39;s yet another solution, unicode-range, for Chrome and Safari only it seems. This defeats the purpose of wide browser compatibility for the font-icon approach.</p>
+
+<p>To be fair, as often in web development, there is not one single solution to tackle one problem.</p>
+
+<p>It was then when I bumped into a very insightful writing from <a href="http://mir.aculo.us/2014/10/31/icon-fonts-vs-inline-svg/">Thomas Fuchs</a> on the topic. As Pete Hunt fantastically put it in JSConf 2013, <a href="https://www.youtube.com/watch?v=x7cQ3mrcKaY">Rethinking Best Practices</a>, I reminded myself that if anything, we as developers should constantly be defying instead of settling.</p>
+
+<p>When it comes to font icons, there are a couple of critical points I would like to emphasize on, because I believe that they are hard to circumvent:</p>
+
+<ul>
+<li>There’s blurry rendering on certain browsers.</li>
+<li>Some special headers are required when serving these font files so that our CDN (Amazon CloudFront).</li>
+<li>You can’t easily edit icons, and it’s hard to see what’s been updated in source code control.</li>
+</ul>
+
+<h3>Enter inline SVG, and SVG stacks</h3>
+
+<p>What is an icon if not a graphic element, an concise image representing a symbol. We need images, and our best friend SVG is not the de-facto approach to add most images to interfaces.</p>
+
+<p>Let&#39;s ask for a few things:</p>
+
+<ul>
+<li>Cross-browser solution, with PNG fallbacks.</li>
+<li>Easy flow and easy addition of icons to the set.</li>
+<li>Optimization and flexibility.</li>
+<li>Styleable and capable to understanding css animations.</li>
+<li>No flash of unstyled text; quite the opposite: instant loading, and guaranteed rendering.</li>
+</ul>
+
+<p>I would like to share my workflow to make vectorial icons a bliss and first I would like to credit the creators of <a href="https://github.com/filamentgroup/grunticon/">grunticon</a> for all the insights I&#39;ve gotten from their workflow. They wrote about their <a href="http://ianfeather.co.uk/ten-reasons-we-switched-from-an-icon-font-to-svg/">reasons for switching</a>, which reinforced my thinking.</p>
+
+<p>To stack icons into one single file, comes in handy the <use> svg element, which allows to refer to any SVG element via its ID attribute.</p>
+
+<p>Generating such stuck for me needs to be as easy as placing a new .svg file into my icons folder.</p>
+
+<p>The markup and css necessary has to be easy, and minimum.</p>
+
+<ul>
+<li>svg2png, svgstore, svg4everybody, snippet.</li>
+</ul>
 
   </div>
   

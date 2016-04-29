@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>Luis Merino</title>
- <link href="http://luismerino.name/atom.xml" rel="self"/>
- <link href="http://luismerino.name/"/>
- <updated>2015-03-25T11:34:14+01:00</updated>
- <id>http://luismerino.name</id>
+ <link href="http://www.luismerino.name/atom.xml" rel="self"/>
+ <link href="http://www.luismerino.name/"/>
+ <updated>2015-06-28T12:06:56+02:00</updated>
+ <id>http://www.luismerino.name</id>
  <author>
    <name>Luis Merino</name>
    <email>mail@luismerino.name</email>
@@ -13,22 +13,71 @@
 
  
  <entry>
-   <title>Day zero plus one</title>
-   <link href="http://luismerino.name/blog/day-zero-plus-one"/>
-   <updated>2015-03-24T00:00:00+01:00</updated>
-   <id>http://luismerino.name/blog/day-zero-plus-one</id>
-   <content type="html">&lt;p&gt;Today&amp;#39;s &lt;em&gt;day zero&lt;/em&gt;, because this, my &lt;em&gt;personal&lt;/em&gt; blog is &lt;strong&gt;back online&lt;/strong&gt;!&lt;/p&gt;
+   <title>Vectorial Iconography</title>
+   <link href="http://www.luismerino.name/blog/vectorial-iconography"/>
+   <updated>2015-06-28T00:00:00+02:00</updated>
+   <id>http://www.luismerino.name/blog/vectorial-iconography</id>
+   <content type="html">&lt;p&gt;The day &lt;em&gt;font icon sets&lt;/em&gt; appeared as a solution, one of the most repeated problems in web development seemed solved almost overnight.&lt;/p&gt;
 
-&lt;p&gt;And &lt;em&gt;plus one&lt;/em&gt;, because I&amp;#39;ve already shared my thoughts in the past, here are some of them to start off:&lt;/p&gt;
+&lt;p&gt;Yes! IE had support for @font-face and .eot files since its 8th version... Say what?!&lt;/p&gt;
 
-&lt;ul&gt;
-&lt;li&gt;&lt;h2&gt;&lt;a href=&quot;https://www.proudsugar.com/blog/mixpanel-js-6-things-you-probably-did-not-know-about&quot;&gt;Mixpanel JS - 6 things you probably didn&amp;#39;t know about&lt;/a&gt;&lt;/h2&gt;&lt;/li&gt;
-&lt;li&gt;&lt;h2&gt;&lt;a href=&quot;https://www.proudsugar.com/blog/how-to-build-your-company-site-using-ruby-rake-in-less-than-9-days&quot;&gt;How to build your company&amp;#39;s site using Ruby/Rake in less than 9 days&lt;/a&gt;&lt;/h2&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;What had we been doing wrong? The web community spent all the internet boom years inventing super smart tools like Cufon and SIRF, and a long etcetera.&lt;/p&gt;
 
 &lt;hr&gt;
 
-&lt;p&gt;Read more from now on in the &lt;a href=&quot;/blog&quot;&gt;recent entries&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;Is this the future in iconland?&lt;/h3&gt;
+
+&lt;p&gt;I believe the strongest point font-based icons have these days are the broad compatibility across browsers and devices they offer. But, are they the future?&lt;/p&gt;
+
+&lt;p&gt;Two years ago at my company, we created SVG sprites as the only needed solution, that&amp;#39;s what you get when you drop IE8 support. To my surprise, our designer came to me with his Windows laptop to ask me why did the SVG displayed with CSS backgrounds looked so blurry... &amp;quot;Why is our logo blurry?&amp;quot;. After some dueling on Inkscape, I quickly found an &lt;a href=&quot;http://benfrain.com/svg-backgrounds-dont-zoom-correctly-in-internet-explorer-10/&quot;&gt;explanation&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Meh, we can&amp;#39;t reliably use SVG in backgrounds, bye bye SVG sprites... Unless...!&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;It seems that putting a dummy SVG tag with width=100% and height=100% make IE11 display all my SVG elements.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Which brings me back to try and understand why we use fonts to represent icons?&lt;/p&gt;
+
+&lt;p&gt;We arrive then at &lt;a href=&quot;https://icomoon.io/#docs/ligatures&quot;&gt;ligatures&lt;/a&gt;. We could then call symbols with common terms. Screen readers and search engines see words. Users see symbols. What a great idea? We write our word and we get an icon. Just like emoticons! I really thought for a bit this was THE solution. Ah, and let&amp;#39;s not forget the idea to use unicode to call symbols to present our icons as well. A risky option as it seems, let&amp;#39;s not &lt;a href=&quot;http://nimbupani.com/markup-free-icon-fonts-with-unicode-range.html&quot;&gt;the unicode private area&lt;/a&gt;. There&amp;#39;s yet another solution, unicode-range, for Chrome and Safari only it seems. This defeats the purpose of wide browser compatibility for the font-icon approach.&lt;/p&gt;
+
+&lt;p&gt;To be fair, as often in web development, there is not one single solution to tackle one problem.&lt;/p&gt;
+
+&lt;p&gt;It was then when I bumped into a very insightful writing from &lt;a href=&quot;http://mir.aculo.us/2014/10/31/icon-fonts-vs-inline-svg/&quot;&gt;Thomas Fuchs&lt;/a&gt; on the topic. As Pete Hunt fantastically put it in JSConf 2013, &lt;a href=&quot;https://www.youtube.com/watch?v=x7cQ3mrcKaY&quot;&gt;Rethinking Best Practices&lt;/a&gt;, I reminded myself that if anything, we as developers should constantly be defying instead of settling.&lt;/p&gt;
+
+&lt;p&gt;When it comes to font icons, there are a couple of critical points I would like to emphasize on, because I believe that they are hard to circumvent:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;There’s blurry rendering on certain browsers.&lt;/li&gt;
+&lt;li&gt;Some special headers are required when serving these font files so that our CDN (Amazon CloudFront).&lt;/li&gt;
+&lt;li&gt;You can’t easily edit icons, and it’s hard to see what’s been updated in source code control.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Enter inline SVG, and SVG stacks&lt;/h3&gt;
+
+&lt;p&gt;What is an icon if not a graphic element, an concise image representing a symbol. We need images, and our best friend SVG is not the de-facto approach to add most images to interfaces.&lt;/p&gt;
+
+&lt;p&gt;Let&amp;#39;s ask for a few things:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Cross-browser solution, with PNG fallbacks.&lt;/li&gt;
+&lt;li&gt;Easy flow and easy addition of icons to the set.&lt;/li&gt;
+&lt;li&gt;Optimization and flexibility.&lt;/li&gt;
+&lt;li&gt;Styleable and capable to understanding css animations.&lt;/li&gt;
+&lt;li&gt;No flash of unstyled text; quite the opposite: instant loading, and guaranteed rendering.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I would like to share my workflow to make vectorial icons a bliss and first I would like to credit the creators of &lt;a href=&quot;https://github.com/filamentgroup/grunticon/&quot;&gt;grunticon&lt;/a&gt; for all the insights I&amp;#39;ve gotten from their workflow. They wrote about their &lt;a href=&quot;http://ianfeather.co.uk/ten-reasons-we-switched-from-an-icon-font-to-svg/&quot;&gt;reasons for switching&lt;/a&gt;, which reinforced my thinking.&lt;/p&gt;
+
+&lt;p&gt;To stack icons into one single file, comes in handy the &lt;use&gt; svg element, which allows to refer to any SVG element via its ID attribute.&lt;/p&gt;
+
+&lt;p&gt;Generating such stuck for me needs to be as easy as placing a new .svg file into my icons folder.&lt;/p&gt;
+
+&lt;p&gt;The markup and css necessary has to be easy, and minimum.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;svg2png, svgstore, svg4everybody, snippet.&lt;/li&gt;
+&lt;/ul&gt;
 </content>
  </entry>
  
